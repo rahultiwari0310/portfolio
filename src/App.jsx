@@ -17,7 +17,7 @@ function App() {
             to="/game"
             className="px-4 py-2 bg-tan text-charcoal rounded-lg font-medium hover:bg-accent transition-colors border bordercream text-sm"
           >
-            Person Clicker
+            Person Clicker Game
           </Link>
         </div>
       </nav>

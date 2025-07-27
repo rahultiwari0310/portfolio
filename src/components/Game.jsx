@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // @ts-expect-error - random-hex-color has no type definitions
 import colorGen from "random-hex-color";
 
-const Person = ({ id, color, x, y, isDead, isFading, onClick }) => {
+const Person = ({ id, color, x, y, isDead, onClick }) => {
   return (
     <div
       style={{
@@ -13,11 +13,11 @@ const Person = ({ id, color, x, y, isDead, isFading, onClick }) => {
         fontWeight: "800",
         left: `${x}px`,
         top: `${y}px`,
-        transition: isFading ? "opacity 2s ease-out" : "all 3s ease-in-out",
+        transition: "all 3s ease-in-out",
         transform: "translate(-50%, -50%)",
         cursor: isDead ? "default" : "pointer",
         userSelect: "none",
-        opacity: isFading ? 0 : isDead ? 0.7 : 1,
+        opacity: isDead ? 0.7 : 1,
       }}
       className="person"
       onClick={() => !isDead && onClick(id)}
@@ -35,7 +35,6 @@ export default function Game() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameComplete, setIsGameComplete] = useState(false);
   const [highScore, setHighScore] = useState(null);
-  const [fadingPeople, setFadingPeople] = useState(new Set());
   const containerRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -113,50 +112,23 @@ export default function Game() {
       setIsGameStarted(true);
     }
 
-    setPeople((prevPeople) => {
-      const updatedPeople = prevPeople.map((person) =>
-        person.id === personId
-          ? {
-              ...person,
-              isDead: true,
-              x: Math.random() * (window.innerWidth - 100),
-              y: window.innerHeight - 80, // Position at bottom
-              targetX: Math.random() * (window.innerWidth - 100),
-              targetY: window.innerHeight - 80,
-            }
-          : person
-      );
+    // Remove the person immediately
+    setPeople((prevPeople) =>
+      prevPeople.filter((person) => person.id !== personId)
+    );
 
-      // Start fade-out animation for the killed person
-      setFadingPeople((prev) => new Set([...prev, personId]));
+    // Check if all people are dead
+    const remainingPeople = people.filter((person) => person.id !== personId);
+    if (remainingPeople.length === 0 && !isGameComplete) {
+      setIsGameComplete(true);
+      const finalTime = timer;
 
-      // Remove the person from DOM after 2 seconds
-      setTimeout(() => {
-        setPeople((prevPeople) =>
-          prevPeople.filter((person) => person.id !== personId)
-        );
-        setFadingPeople((prev) => {
-          const newSet = new Set(prev);
-          newSet.delete(personId);
-          return newSet;
-        });
-      }, 2000);
-
-      // Check if all people are dead
-      const allDead = updatedPeople.every((person) => person.isDead);
-      if (allDead && !isGameComplete) {
-        setIsGameComplete(true);
-        const finalTime = timer;
-
-        // Update high score if this is faster
-        if (!highScore || finalTime < highScore) {
-          setHighScore(finalTime);
-          localStorage.setItem("personClickerHighScore", finalTime.toString());
-        }
+      // Update high score if this is faster
+      if (!highScore || finalTime < highScore) {
+        setHighScore(finalTime);
+        localStorage.setItem("personClickerHighScore", finalTime.toString());
       }
-
-      return updatedPeople;
-    });
+    }
   };
 
   const resetGame = () => {
@@ -349,7 +321,6 @@ export default function Game() {
             x={person.x}
             y={person.y}
             isDead={person.isDead}
-            isFading={fadingPeople.has(person.id)}
             onClick={handlePersonClick}
           />
         ))}
