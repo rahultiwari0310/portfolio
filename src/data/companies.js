@@ -9,7 +9,7 @@ export const companies = [
       {
         name: "Lead Filters Revamp",
         description:
-          "Architected and led the complete overhaul of Apollo.io’s lead filtering system—core to how users segment and discover leads. Built a config-driven system, supported 60+ filters, and collaborated with cross-functional teams.",
+          "Architected and led the complete overhaul of Apollo.io’s lead filtering system—core to how users segment and discover leads. Introduced a fully config-driven architecture that supported over 60 filters, enabling dynamic configuration and extensibility. Coordinated closely with backend teams, product managers, and QA to ensure pixel-perfect and performant UI. System-wide changes led to smoother user experience and easier filter onboarding for future updates.",
         tech: [
           "React",
           "Redux",
@@ -27,7 +27,7 @@ export const companies = [
       {
         name: "Performance & Testing Enhancements",
         description:
-          "Reduced bundle size (lazy loading, date-fns), improved API loading strategy, and implemented comprehensive testing with Vitest, Cypress, and Playwright.",
+          "Led platform-wide performance profiling efforts that reduced page LCP by 3 seconds by removing unused APIs, optimizing date libraries with date-fns, and introducing lazy loading strategies. Introduced comprehensive test frameworks including unit (Vitest), integration (Cypress), and E2E (Playwright), improving engineering velocity and confidence across the org.",
         tech: [
           "Vite",
           "Vitest",
@@ -51,7 +51,7 @@ export const companies = [
       {
         name: "Chatbot Platform & Academy",
         description:
-          "Developed chatbots and a content-management academy for banks. Allowed financial clients to configure chatbots for greetings, responses, events, and outages.",
+          "Contributed to the UI layer of Interface.ai’s flagship chatbot configuration platform used by regional banks. Developed a modular content management system to allow clients to control the tone, voice, and conditional logic of chatbot workflows. Also contributed to a holiday management and working-hour configuration app, increasing chatbot adaptability for enterprise clients.",
         tech: [
           "React",
           "Redux",
@@ -75,13 +75,13 @@ export const companies = [
       {
         name: "Split Test Portal",
         description:
-          "Built a portal for managing A/B tests, featuring ReactVis charting, TypeScript migration, and test coverage increase from 5% to 80%.",
+          "Designed and implemented an internal A/B experimentation management tool from scratch. Enabled experiment creation, metric tracking, and status monitoring across the data platform. Migrated from JavaScript to TypeScript, improving type safety and reducing bugs. Enhanced test coverage from 5% to 80%.",
         tech: ["React", "Redux", "TypeScript", "ReactVis"],
       },
       {
         name: "Data Lineage Visualization",
         description:
-          "Visualized 50,000+ table dependencies using React Flow and custom APIs in Node.js and Golang.",
+          "Visualized lineage of 50,000+ BigQuery tables and their interdependencies using React Flow. Built efficient rendering logic for graph traversal, zoom/pan performance, and edge handling. Used custom API backends written in Node.js and Golang to provide performant data to frontend.",
         tech: [
           "React",
           "Redux",
@@ -103,7 +103,7 @@ export const companies = [
       {
         name: "Seller Registration Revamp",
         description:
-          "Architected and led team of 5 to build a new seller onboarding system with integrations for document verification, e-signing, and more. Reduced onboarding TAT from 45 to 15 days.",
+          "Led a team of 5 engineers to completely rebuild the seller onboarding flow from scratch. Designed the system’s architecture including form schema, validation, API contracts, and service integrations. Integrated multiple third-party APIs (GST, Aadhaar, PAN, bank verification, e-sign) to enable seamless verification. Cut seller onboarding turnaround from 45 days to 15.",
         tech: [
           "React",
           "Redux",
@@ -120,19 +120,19 @@ export const companies = [
       {
         name: "GodMode (Admin Impersonation)",
         description:
-          "Enabled admins to impersonate sellers for debugging and support, with secure permissions. Built from scratch.",
+          "Built an internal administrative interface allowing authorized admins to impersonate any seller account to troubleshoot and debug. System included full audit logs and scoped permissioning, integrated across all seller-facing apps.",
         tech: ["React", "Redux", "TypeScript", "Node.js"],
       },
       {
         name: "Slot Booking System (Inward Assist)",
         description:
-          "Developed a slot booking portal for sellers to schedule inventory deliveries to warehouses.",
+          "Developed warehouse capacity planning tool to allow sellers to pre-book slots for dispatching goods. Integrated it with seller portal and real-time inventory feeds.",
         tech: ["React", "Redux", "TypeScript", "Node.js"],
       },
       {
         name: "OAuth 2.0 Library",
         description:
-          "Created a reusable Node.js OAuth 2.0 authentication library (Login with Myntra) as an NPM package.",
+          "Created reusable OAuth 2.0 authentication layer for all Myntra apps, published as internal NPM package, allowing seamless single sign-on for developers and partners.",
         tech: ["Node.js", "NPM", "OAuth 2.0"],
       },
     ],
@@ -147,13 +147,13 @@ export const companies = [
       {
         name: "Group Insurance Portal",
         description:
-          "Developed a group insurance portal for US-based clients—policy management, claims, dependents, and more.",
+          "Built front-end for a US-based group insurance product, allowing users to buy health plans, top-up, add dependents, and submit claims. Delivered reusable UI components using React and Redux.",
         tech: ["React", "Redux", "HighCharts", "SASS"],
       },
       {
         name: "Agent Website Builder",
         description:
-          "Built a self-serve website creator for insurance agents with theme/template options. BackboneJS, jQuery.",
+          "Created a drag-and-drop builder for insurance agents to create custom microsites. Enabled templated themes, real-time preview, and hosted deployment.",
         tech: ["BackboneJS", "jQuery", "JavaScript"],
       },
     ],

@@ -27,7 +27,7 @@ export default function ProjectTabs({ projects, activeTab, setActiveTab }) {
           </button>
         ))}
       </div>
-      <div className="relative min-h-[120px]">
+      <div>
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -35,7 +35,6 @@ export default function ProjectTabs({ projects, activeTab, setActiveTab }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="absolute left-0 right-0"
           >
             <div className="mb-2 text-charcoal/90">
               {projects[activeTab].description}
