@@ -1,0 +1,145 @@
+\documentclass[a4paper,11pt]{article}
+%-----------------------------------------------------------
+\usepackage[top=0.75in, bottom=0.75in, left=0.5in, right=0.85in]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{palatino}
+\fontfamily{SansSerif}
+\selectfont
+
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+% \usepackage{helvetica}
+% \usepackage{array}
+\usepackage{color}
+\usepackage{tabu}
+\definecolor{mygrey}{gray}{0.80}
+\textheight=9.75in
+\raggedbottom
+% \raggedright
+\setlength{\tabcolsep}{0in}
+\newcommand{\isep}{-2 pt}
+\newcommand{\lsep}{-0.5cm}
+\newcommand{\psep}{-0.6cm}
+\renewcommand{\labelitemii}{$\circ$}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.175in}
+%\addtolength{\evensidemargin}{-0.175in}
+%\addtolength{\textwidth}{1.75in}
+%\addtolength{\topmargin}{0.1375in}
+%\addtolength{\textheight}{1.75in}
+\pagestyle{empty}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\small \colorbox{mygrey}{\begin{minipage}{0.975\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[3]{
+% \renewcommand{\tabcolsep}{20cm}
+\begin{tabular*}{6.62in}{l @{\extracolsep{\fill}} r}
+	\textsc{{\textbf{#1}}} & \textsc{\textit{[#2]}} \\
+\end{tabular*}\vspace{-8pt}}
+
+\begin{document}
+
+
+{\normalsize\begin{tabular}[c]{l}
+\\
+  +91 9165932695 \\
+  rahultiwari0310@gmail.com \\
+  \href{https://www.linkedin.com/in/rahul-tiwari-b623b355/}{linkedin.com/in/rahul-tiwari-b623b355} \\
+\end{tabular}}\hfill%
+{\Large\bfseries\begin{tabular}[c]{c}
+  Rahul Tiwari
+\end{tabular}}\hfill%
+{\normalsize\begin{tabular}[c]{r}
+\\
+  \href{https://rahultiwari.vercel.app/}{rahultiwari.vercel.app} \\
+  \href{https://github.com/rahultiwari0310}{github.com/rahultiwari0310} \\
+\end{tabular}}%
+
+\bigskip
+
+\resheading{\textbf{\large EXPERIENCE SUMMARY (9 years)} }\\[\lsep]
+
+\vspace{0.05cm}
+\begin{itemize}
+\item \textbf{apollo.io} \emph{[Senior Frontend Engineer, December '23 - ongoing]}\\[-0.6cm]
+\begin{itemize}
+\item Contributed to platform frontend initiatives, including GitHub CI workflows, test frameworks and performance profiling.
+\textbf{Tech Stack:} Webpack, Cypress, GitHub Actions, Vite, Vitest, Playwright
+\item Improved web vitals (LCP) by 3 seconds by optimizing API dependencies.
+\textbf{Tech Stack:} React, Redux
+\item Contributed to revamping leads page (80\% usecase) with config-driven filters for easier maintenance.
+\textbf{Tech Stack:} React, Redux, Cypress, Vitest
+\end{itemize}
+
+\item \textbf{interface.ai} \emph{[Software Development Engineer, - III February '23 - December '23]}\\[-0.6cm]
+\begin{itemize}
+\item Implemented major upgrade to interface.ai chat bot UI, released to multiple clients.
+\textbf{Tech Stack:} React, NodeJS
+\item Developed Academy application for holiday/working hours management.
+\textbf{Tech Stack:} React, NodeJS, NX
+\end{itemize}
+
+\item \textbf{Coinbase India} \emph{[Software Engineer, October '21 - January '23]}\\[-0.6cm]
+\begin{itemize}
+\item Developed in-house A/B experiment tool, the most used internal tool at Coinbase.
+\textbf{Tech Stack:} React, Jest
+\end{itemize}
+\item \textbf{Myntra Designs Pvt Ltd} \emph{[Software Engineer, Feb '18 - October '21]}\\[-0.6cm]
+\begin{itemize}
+\item Built multiple components in the in-house UI component library with unit tests and auto-generated documentation. This theme-able library is widely used internally.
+\textbf{Tech Stack:} React, Jest, Enzyme
+\item Lead 'Onboarding system' project for new sellers on Myntra platform. Team of 5 members with integrations for document verification and e-signing. Reduced onboarding TAT from 60 days to 13 days.
+\textbf{Tech Stack:} React, Redux, NodeJS, ExpressJS, MongoDB, Redis, RabbitMQ
+\item Developed and standardised deployment procedure for all UI apps at Myntra, widely adopted across the company.
+\textbf{Tech Stack:} Gradle, Shell Script, Azure Storage, MySQL, NodeJS, Webpack
+% \item Developed 'Health Snapshot', this is being used by sellers to manage and improve product inventory health. Provides a view of at risk of delisting products and products with maximum returns. \textbf{Tech Stack:} React, Redux, Java, ElasticSearch
+%\item Developed 'Impersonate User' feature, this is being used internally to impersonate seller accounts and reproduce production bugs. This feature supported impersonation for multiple internal apps and maintained complete audit traces.
+%\textbf{Tech Stack:} React, NodeJS
+% \item Developed In-app notification system, which is being used by multiple systems to show notifications on seller home page, for inwards, listings and orders. System can handle scheduled notifications.
+% \textbf{Tech Stack:} React, Redux, Golang, Java, MySQL
+%\item Supported migration of multiple services from AWS to azure infrastructure. Migrated data for secondary storages such as Elasticsearch, Redis.
+%\textbf{Tech Stack:} Java, NodeJS, Shell Script
+% \item Developed 'Advertisement Management' system, which helped sellers to apply for ads on the Myntra platform. It was widely adopted and we received more than 500 requests in the first week itself.
+%\textbf{Tech Stack:} React, Redux, ExpressJS
+% \item Built multiple applications that enabled partner interactions with Myntra and Jabong - to facilitate vendor returns, showcase brand performance and surface financial reports.
+% \item Built a system which helped in maintaining the warehouse capacity of products being stored in the warehouse. Helped warehouse team in allowing sellers to book slots as to when the products could be sent to the warehouses.
+% \textbf{Tech Stack:} React, Redux, ExpressJS
+\end{itemize}
+\item \textbf{Avizva Solutions Pvt Ltd} \emph{[Associate FrontEnd Engineering- L1, July '16 - Feb '18]}\\[-0.6cm]
+\begin{itemize}
+\item Developed application for US-based insurance giant for insurance top-ups, health plans, dependants and claims.
+\textbf{Tech Stack:} React, Redux
+%\item Developed and maintained application for US based insurance company. The website allowed any insurance agents to create their own insurance selling online platform using a few predefined templates.
+%\textbf{Tech Stack:} BackboneJS, jQuery
+\end{itemize}
+
+%\item Worked across various technologies like JavaScript, Node.js, ReactJS, Golang, Java
+
+%\item Key Strengths - Problem solving skills, Solution Designing, End to End Ownership of projects, communication with stakeholders, always keen on understanding business value of the project.
+
+\end{itemize}
+
+% \hspace{0.5cm}\\
+
+\resheading{\textbf{\large TECHNICAL SKILLS}}\\[\lsep]
+
+\vspace{0.05cm}
+\begin{itemize}
+  \item \textbf{Programming Languages}: TypeScript, JavaScript, HTML, CSS, Golang \\[-0.6cm]
+  \item \textbf{Frontend Technologies \& Tools}: React, Redux, SASS, Webpack, Vite, Vitest, Jest, Cypress, Playwright, Sentry, jQuery, BackboneJS, HighCharts\\[-0.6cm]
+  \item \textbf{Backend \& Infrastructure}: Node.js, Ruby on Rails, Golang, AWS, Kubernetes, RabbitMQ, OAuth 2.0\\[-0.6cm]
+  \item \textbf{Databases}: MongoDB, Elasticsearch, Redis\\[-0.6cm]
+%  \item \textbf{Familiar with}: Android, Hadoop \\[-0.6cm]
+%   \item \textbf{Tools}: Eclipse, Netbeans, \LaTeX, SVN
+\end{itemize}
+
+\vspace{0.2cm}
+\resheading{\textbf{\large ACADEMICS} }\\\\[\lsep]
+
+\vspace{0.02cm}
+\textbf{B.Tech. in Electronics \& Communication Engineering} from MANIT Bhopal (2016)
+
+\end{document}
