@@ -21,12 +21,6 @@ function App() {
             >
               Person Clicker Game
             </Link>
-            <Link
-              to="/archery"
-              className="px-4 py-2 bg-tan text-charcoal rounded-lg font-medium hover:bg-accent transition-colors border bordercream text-sm"
-            >
-              Archery Game
-            </Link>
           </div>
         </div>
       </nav>
