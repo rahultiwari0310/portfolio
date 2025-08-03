@@ -11,7 +11,7 @@ const getTechIcon = (techName) => {
 export default function ProjectTabs({ projects, activeTab, setActiveTab }) {
   return (
     <div>
-      <div className="flex gap-2 mb-2">
+      <div className="flex gap-2 mb-2 overflow-x-auto">
         {projects.map((p, idx) => (
           <button
             key={p.name}
