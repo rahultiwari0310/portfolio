@@ -16,7 +16,7 @@ export default function ProjectTabs({ projects, activeTab, setActiveTab }) {
           <button
             key={p.name}
             className={
-              "px-4 py-1 rounded-full text-sm font-medium transition " +
+              "px-4 py-1 rounded-full text-sm font-medium transition whitespace-nowrap flex-shrink-0 " +
               (activeTab === idx
                 ? "bg-tan text-charcoal border bordercream"
                 : "bg-cream text-charcoal/70 hover:bg-tan border bordercream")
